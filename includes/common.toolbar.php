@@ -10,18 +10,17 @@ include_once 'user.utils.php';
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Penguin Tracker</a>
+        <a class="navbar-brand" href="/">Penguin Tracker</a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Home</a></li>
-
+            <li id = "home"><a href="/">Home</a></li>
             <?php if (isAuthenticated()) { ?>
-                <li><a href="/user/userinfo.php">User Info</a></li>
+                <li id = "userinfo"><a href="/user/userinfo.php">User Info</a></li>
                 <li><a href="/user/logout.php">Logout <?php echo(getAuthUsername()); ?></a></li>
             <?php } else { ?>
-                <li><a href="/user/create.php">Create Account</a></li>
-                <li><a id="button">Login</a></li>
+                <li id="create"><a href="/user/create.php">Create Account</a></li>
+                <li id="login"><a id="button">Login</a></li>
             <?php } ?>
         </ul>
     </div><!--/.nav-collapse -->

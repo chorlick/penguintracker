@@ -8,12 +8,18 @@ function getConnection() {
     global $SQLITE_CONNECTION_ARGS_ATTR;
     global $SQLITE_CONNECTION_ARGS_EXCP;
     global $SQLITE_DB_LOCATION;
+
+    if (!file_exists($SQLITE_DB_LOCATION)) {
+        init_db();
+    }
+
     try {
         $connection = new PDO("sqlite:" . $SQLITE_DB_LOCATION);
         $connection->setAttribute($SQLITE_CONNECTION_ARGS_ATTR, $SQLITE_CONNECTION_ARGS_EXCP);
     } catch (Exception $ex) {
         echo "EXCEPTION:  Connection failed : " . $ex->getMessage();
     }
+
     return $connection;
 }
 
@@ -52,6 +58,7 @@ function init_db() {
             $connection->exec($QUERY_CREATE_DEFAULT_USER);
         }
     } catch (Exception $ex) {
+        $connection = null;
         echo "EXCEPTION:  Connection failed : " . $ex->getMessage();
     }
     return $connection;

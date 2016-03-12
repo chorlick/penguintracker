@@ -6,7 +6,7 @@ $(function () {
         var options = {};
 
         if ($("#effect").is(":visible")) {
-            $("#effect:visible").removeAttr("style").fadeOut();
+            $("#effect:visible").hide("blind", options, 500);
         } else {
             $("#effect").show("blind", options, 500);
         }

@@ -1,5 +1,5 @@
 <?php
-include_once '../includes/config.php';
+include_once dirname(__DIR__) . '../includes/config.php';
 
 //using sqlite
 //https://github.com/sqlitebrowser/sqlitebrowser/releases/download/v3.8.0/sqlitebrowser-3.8.0-win32v3.exe

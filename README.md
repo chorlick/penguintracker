@@ -4,6 +4,8 @@ Introduction
 This is the webframeworks 663 sample application. This is a basica web application
 that allows a user to register then access "hidden" php pages behind the application. 
 
+BY DEFAULT THE PHP EMBEDDED WEBSERVER WILL BE ACCESSIBLE AT http://localhost:8000
+
 Configuration Settings
 =======================
 This project is such that no external server is required; web, database or otherwise.
@@ -34,7 +36,7 @@ This projrect will automatically install the database tables and create a defaul
 
 *WARNING*
 
-THE DEFAULT USER CREATED IS LOCATED IN THE /includes/config.php FILE.
+THE DEFAULT USER CREATED IS LOCATED IN THE /includes/config.php FILE. 
 
 Also the project was modified to use sqlite and the php embedded webserver and 
 documetnation was added. 

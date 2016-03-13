@@ -12,6 +12,7 @@ in the utils directory. Also the config.php requires a writeable path for the
 sqlite file this config file is located at /includes/config.php
 
 *WARNING*
+
 BE SURE TO MODIFY THE /utils/start_web_server script AND /includes/config.php
 ALSO PLEASE MAKE SURE YOUR PHP BINARY OR INI FILE INCLUDES SQLITE SUPPORT.
 
@@ -32,6 +33,7 @@ This projrect will automatically install the database tables and create a defaul
 'admin' with password 'admin'
 
 *WARNING*
+
 THE DEFAULT USER CREATED IS LOCATED IN THE /includes/config.php FILE.
 
 Also the project was modified to use sqlite and the php embedded webserver and 

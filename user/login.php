@@ -5,6 +5,10 @@ $errors = array();
 $username = "";
 $pass1 = "";
 
+//Check here to see if we need to init anything;
+include_once "../includes/data.connect.php";
+init_db();
+
 // Check if this is a postback
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 

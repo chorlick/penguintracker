@@ -1,4 +1,6 @@
 <?php
+
+    //SET THIS TO THE DIRECTORY TO WRITE THE SQLITE DB TO 
     $SQLITE_DB_LOCATION          = "C:\\Users\chorl_000\\Documents\\NetBeansProjects\\PenguinTracker-master\\db\\penguin.sqlite";
     $SQLITE_CONNECTION_ARGS_ATTR = PDO::ATTR_ERRMODE;
     $SQLITE_CONNECTION_ARGS_EXCP = "PDO::ERRMODE_EXCEPTION";

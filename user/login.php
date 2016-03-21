@@ -36,11 +36,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (count($errors) == 0) {
 
         if (authenticate($username, $pass1) == false) {
-            
             array_push($errors, "Failed to authenticate.");
-        }
-        else {
-            
+        } else {
+   
             header('Location: /user/userinfo.php');
         }
     }
@@ -60,7 +58,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <link rel="icon" href="/css/images/favicon.ico">
 
         <title>Penguin Tracker - Login</title>
-
+        <script type="text/javascript">
+  
+        </script>
         <?php include '../includes/common.header.php'; ?>
     </head>
 

@@ -1,6 +1,7 @@
 <?php
 
 include_once 'data.connect.php';
+include_once dirname(__DIR__) . '\\includes\\debug.php';
 
 class User {
 
@@ -24,23 +25,22 @@ function getAuthUsername() {
 
 function getAuthUser() {
 
-    return getUser(getAuthUsername());
+    return readUser(getAuthUsername());
 }
 
 function setAuthCookie($username) {
-
     setcookie('AUTH_USER', $username, time() + 60 * 60 * 24 * 365, '/');
 }
 
 function deleteAuthCookie() {
-    
+
     setcookie('AUTH_USER', '', time() - 1000, '/');
 }
 
 function authenticate($username, $password) {
 
     $passHash = md5($password);
-    $user = getUser($username);
+    $user = readUser($username);
 
     if ($user->passHash == $passHash) {
 
@@ -52,18 +52,16 @@ function authenticate($username, $password) {
     }
 }
 
-function getUser($username) {
+function readUser($username) {
 
     try {
         $conn = getConnection();
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $stmt = $conn->prepare("SELECT `userid`, `firstname`, `lastname`, `username`, `passwordhash` FROM `users`");
+        $sql = "SELECT `userid`, `firstname`, `lastname`, `username`, `passwordhash` FROM `users` where username = '" . $username . "';";
+        $stmt = $conn->prepare($sql);
         $stmt->execute();
-
         $user = null;
-
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-
             $user = new User();
             $user->userID = $row["userid"];
             $user->firstName = $row["firstname"];
@@ -71,12 +69,24 @@ function getUser($username) {
             $user->username = $row["username"];
             $user->passHash = $row["passwordhash"];
         }
-
         $conn = null;
-
         return $user;
     } catch (PDOException $e) {
         echo "Error: " . $e->getMessage();
     }
-    $conn = null;
+}
+
+function writeUser($user) {
+    try {
+        $conn = getConnection();
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $sql = "UPDATE users SET username='" . $user["username"] . "', firstname = '" . $user["firstname"] . "', lastname = '" . $user["lastname"] . "' where userid = '" . $user["userID"] . "';";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $conn = null;
+        setAuthCookie($user["username"]);
+        return "ok";
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage();
+    }
 }

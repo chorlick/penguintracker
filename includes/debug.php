@@ -5,5 +5,6 @@
     fwrite($pfile, "[DEBUG] " .$string . "\n");
        fclose($pfile);
     }
+    
 ?>
 

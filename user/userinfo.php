@@ -8,9 +8,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <link rel="icon" href="/css/images/favicon.ico">
-
         <title>Penguin Tracker - Account Created</title>
-
         <?php include '../includes/common.header.php'; ?>
     </head>
 
@@ -21,16 +19,31 @@
         </nav>
 
         <div class="container">
-
             <div class="row">
                 <div class="col-md-12">
                     <h1>User Info</h1>
+                    <form>    
+                        <div class="form-group" id = "username-group">
+                            <label for="username">Username</label>
+                            <input type ="text" id="username" placeholder="Username" class="form-control"></input>
+                        </div>
+                        <div class="form-group">
+                            <label for="firstname">First Name</label>
+                            <input type ="text" id ="firstname" class="form-control" placeholder="First Name"></input>
+                        </div>
+                        <div class="form-group">
+                            <label for="firstname">Last Name</label>
+                            <input type ="text" id ="lastname" class="form-control" placeholder="Last Name"></input>
+                        </div>
+                            <input type ="hidden" id ="userID">
+                            <button type="button" id="save" class="btn btn-default">Save</button>
+                    </form>
                 </div>
             </div>
+        </div>
+    </div><!-- /.container -->
 
-        </div><!-- /.container -->
+    <?php include '../includes/common.javascript.php'; ?>
 
-        <?php include '../includes/common.javascript.php'; ?>
-
-    </body>
+</body>
 </html>

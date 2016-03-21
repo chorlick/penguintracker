@@ -7,9 +7,5 @@
       integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
 <link rel="stylesheet" href="/css/mainstyles.css">
-
 <link rel="stylesheet" href="/css/jquery-ui.css">
-<script src="/js/jquery.js"></script>
-<script src="/js/jquery-ui.js"></script>
-<script src="/js/logincontroller.js"></script>
-<Script src ="/js/activecontroller.js"></script>
+

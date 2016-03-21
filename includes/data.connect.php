@@ -101,6 +101,26 @@ function default_user_exists($pdo, $username) {
         return true;
     }
 }
+
+function user_exists( $username) {
+    $pdo = getConnection();
+    
+    $sql = "SELECT * FROM users WHERE username = '$username'";
+    log_to_stdio($sql);
+    $statement = $pdo->prepare($sql);
+    $statement->execute();
+    $result = $statement->fetchAll();
+    $statement->closeCursor();
+    if (sizeof($result) == 0) {
+        log_to_stdio("username ");
+    
+        return false;
+    } else {
+        return true;
+        log_to_stdio("username does not exist");
+    }
+    $pdo = null;
+} 
 ?>
 
 

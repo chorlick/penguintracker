@@ -1,0 +1,15 @@
+
+#REGIS FILES
+#WEB ROOT
+C:\code\frameworks\xampp\htdocs\regis
+
+#DB FILE
+$SQLITE_DB_LOCATION = "C:\\code\\frameworks\\xampp\\htdocs\\regis\\db\\penguin.sqlite";
+
+#MINE
+#WEB ROOT
+C:\Users\chorl_000\Documents\NetBeansProjects\penguin
+#DB FILE
+$SQLITE_DB_LOCATION = "C:\\Users\chorl_000\\Documents\\NetBeansProjects\\penguin\\db\\penguin.sqlite";
+#PHP PATH
+C:\Users\chorl_000\code\php\

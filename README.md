@@ -43,3 +43,14 @@ THE DEFAULT USER CREATED IS LOCATED IN THE /includes/config.php FILE.
 Additionally, the project was modified to use sqlite and the php embedded webserver and 
 documetnation was added. 
 chorlick 3-12-2016
+
+Week 2
+---------
+This week we added some ajax calles to the penguin tracker application. These are
+mostly seen on the userinfo.php page. All of the information is populated with a few 
+calls to the back end database. 
+
+Additionally, I added in the code from week 1 to make sure there is a mouse over
+event. This was added to the header, when the user mouse overs one of the menu 
+elements the active class is added and then removed when the mouse out even is caught
+chorlick 3-19-2016

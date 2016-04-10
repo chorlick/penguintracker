@@ -17,9 +17,3 @@ app.config(function ($routeProvider) {
 });
 
 
-app.controller("PenguinDetailController", function ($scope, $log) {
-
-    
-    $log.debug("Uuid " + $scope.uuid);
-    
-});

@@ -10,6 +10,10 @@ function readUserInfo($user) {
     data.request.user = {};
     data.request.user.username = currentUsername;
     
+    if(!$("#username").length) {
+        return;
+    }
+    
     $.post("/ajax/userInfoController.php", data, function (resp, text, xhr) {
         $("#username").val(resp["username"]);
         $("#firstname").val(resp["firstName"]);

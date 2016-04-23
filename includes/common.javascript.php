@@ -25,5 +25,7 @@
 <script type ="text/javascript"  src="/services/penguinListService.js"></script>
 <script type ="text/javascript"  src="/services/PenguinDetailService.js"></script>
 <script type ="text/javascript"  src="/js/PenguinDetailController.js"></script>
+<script defer src="js/jquery.flexslider.js"></script>
+
 
     

@@ -8,6 +8,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <link rel="icon" href="/images/favicon.ico">
+        <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
 
         <title>Penguin Tracker</title>
 
@@ -29,7 +30,24 @@
             </div>
             <div class="row" ng-controller="AngularController">
                 <div class="col-md-4">
-                    <img src="/images/240x342xemperor-penguin-clipart-2.png" alt="Penguin" class="img-rounded" style="max-width:100%;">
+                    <section class="slider">
+                        <div class="flexslider">
+                            <ul class="slides">
+                                <li>
+                                    <img src="images/penguin-baby.jpg" />
+                                </li>
+                                <li>
+                                    <img src="images/penguin-group.jpg" />
+                                </li>
+                                <li>
+                                    <img src="images/penguin-parent.jpg" />
+                                </li>
+                                <li>
+                                    <img src="images/penguin-sweater.jpeg" />
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
                 </div>
                 <div class="col-md-8"  >
                     Penguin Tracker is a sample website for MSSE 663 Web Frameworks.</br>

@@ -54,3 +54,10 @@ Additionally, I added in the code from week 1 to make sure there is a mouse over
 event. This was added to the header, when the user mouse overs one of the menu 
 elements the active class is added and then removed when the mouse out even is caught
 chorlick 3-19-2016
+
+Week 5
+----------
+Added to the first page a modification to last weeks penguin table list. Basically
+It retreives the same data from the php backened but it now loads it over ajax request. 
+Also the table now has a link in the first column, once this link is clicked the page will
+load, using the angular route system, and request the penguin detail information. 

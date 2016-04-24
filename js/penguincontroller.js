@@ -26,5 +26,8 @@ app.controller("PenguinController", function ($scope, $log, NgTableParams, Pengu
         }, {counts: [5, 10, 25], data: response});
         $scope.data = response;
     });
-
+    
+    $scope.notify = function() {
+        alert('blah');
+    }
 });
